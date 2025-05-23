@@ -29,7 +29,6 @@ import Header from 'components/header'
 import SEO from 'components/seo'
 import { convertBackticksToInlineCode } from 'utils/convert-backticks-to-inline-code'
 import { Blog as IBlog } from 'contentlayer/generated'
-import { relativeTimeFromDates } from 'utils/to-relative-time';
 import { IconType } from 'react-icons/lib'
 import { ReactElement } from 'react'
 import { DiscordCard } from 'components/discord-card'
@@ -159,7 +158,7 @@ function BlogEntry(props: { entry: IBlog }) {
     publishedDate,
     description,
     tags,
-  } = props.entry
+  } = props.entry;
 
   return (
     <LinkBox
@@ -193,7 +192,7 @@ function BlogEntry(props: { entry: IBlog }) {
         alignItems={'center'}
       >
         <Link flex={1} alignItems={'center'}>
-          <Text>{relativeTimeFromDates(new Date(publishedDate))}</Text>
+          <Text>{ new Intl.DateTimeFormat('en-US', { dateStyle: 'full', timeStyle: 'short' }).format(new Date(publishedDate)) }</Text>
         </Link>
         <Text>
           Read more
