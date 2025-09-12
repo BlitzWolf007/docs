@@ -10,8 +10,7 @@ changelog: https://github.com/unikraft/unikraft/compare/RELEASE-0.16.3...RELEASE
 We are proud to announce the latest version update of Unikraft, v0.17!
 This release comes with plenty of new features and updates.
 
-⚠️  Be aware of the following potentially breaking changes:
-
+<Warning title="Be aware of the following potentially breaking changes">
 * The `linuxu` platform has been removed.
   No build should be performed against the `linuxu` platform.
 
@@ -19,10 +18,11 @@ This release comes with plenty of new features and updates.
   This means that, when using QEMU, one of two options must be enabled:
 
   1. You are using QEMU >= 8.0.
-  1. You are using hardware acceleration, with KVM.
+  2. You are using hardware acceleration, with KVM.
 
   There is an (**insecure**) configuration option to disable support for CPU-based randomization.
   This is however only recommended for test & development builds.
+</Warning>
 
 Here is the full updates list:
 

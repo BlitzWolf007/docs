@@ -20,13 +20,15 @@ It also contains plenty of fixes that improve the stability and application supp
 In this blog post, we present the new features available in Unikraft.
 For a full breakdown, please check out the [changelog](https://github.com/unikraft/unikraft/compare/RELEASE-0.19.1...RELEASE-0.20.0).
 
-> [!IMPORTANT]
-> **DEPRECATION NOTICE:** The old VFS, vfscore, will be deprecated in Unikraft 0.22.0 (early 2026).
-> For help on transitioning, consult the migration guide or join us on Discord.
+<Warning title="DEPRECATION NOTICE">
+  The old VFS, vfscore, will be deprecated in Unikraft 0.22.0 (early 2026).
+  For help on transitioning, consult the migration guide or join us on Discord.
+</Warning>
 
-> [!IMPORTANT]
-> **COMPATIBILITY NOTICE:** The implementation of `arch_prctl` system call has been migrated from `app-elfloader` to `libposix-process`.
-> Configurations using `CONFIG_APPELFLOADER_ARCH_PRCTL` should now use `CONFIG_LIBPOSIX_PROCESS_ARCH_PRCTL`.
+<Warning title="COMPATIBILITY NOTICE">
+  The implementation of `arch_prctl` system call has been migrated from `app-elfloader` to `libposix-process`.
+  Configurations using `CONFIG_APPELFLOADER_ARCH_PRCTL` should now use `CONFIG_LIBPOSIX_PROCESS_ARCH_PRCTL`.
+</Warning>
 
 ### New VFS
 
